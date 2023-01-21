@@ -12,7 +12,15 @@ const IndexPage = () => {
   if (!data)
     return (
       <div className="min-h-screen bg-black flex justify-center items-center">
-        <div className="text-white text-center items-center">Loading...</div>
+        <div className="loader">
+          <div className="loader-square"></div>
+          <div className="loader-square"></div>
+          <div className="loader-square"></div>
+          <div className="loader-square"></div>
+          <div className="loader-square"></div>
+          <div className="loader-square"></div>
+          <div className="loader-square"></div>
+        </div>
       </div>
     );
 
