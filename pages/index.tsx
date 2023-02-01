@@ -4,9 +4,7 @@ import useSWR from "swr";
 const IndexPage = () => {
   const circumference = 30 * 2 * Math.PI;
   const API = process.env.NEXT_PUBLIC_VERCEL_API;
-  const { data, error } = useSWR(`${API}/query/arbitrum/blocks`, fetcher, {
-    refreshInterval: 3000,
-  });
+  const { data, error } = useSWR(`${API}/query/arbitrum/blocks`, fetcher);
 
   if (error) return <div>failed to load</div>;
   if (!data)
